@@ -1,0 +1,92 @@
+@import 'variable';
+$bor-color: #e9eaec;
+
+.after {
+  content: '';
+  position: absolute;
+  transform: scaleY(0.5);
+  pointer-events: none;
+  box-sizing: border-box;
+  background-color: $bor-color;
+  height: 1px;
+}
+
+/* 1px border **/
+.bor-t {
+  position: relative;
+  &::before {
+    @extend .after;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.bor-r {
+  position: relative;
+  &::before {
+    @extend .after;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+.bor-l {
+  position: relative;
+  &::before {
+    @extend .after;
+    top: 0;
+    left: 0;
+    bottom: 0;
+  }
+}
+.bor-b {
+  position: relative;
+  &::before {
+    @extend .after;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+.bor-tb {
+  position: relative;
+  &::before {
+    @extend .after;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  &::after {
+    @extend .after;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.bor {
+  border: 1px solid $hrc;
+}
+
+.bor-dashed {
+  border: 1px dashed $hrc;
+}
+.bor-b-dashed {
+  border-bottom: 1px dashed $hrc;
+}
+.bor-l-dashed {
+  border-left: 1px dashed $hrc;
+}
+.bor-t-dashed {
+  border-top: 1px dashed $hrc;
+}
+.bor-r-dashed {
+  border-right: 1px dashed $hrc;
+}
+.dash-line {
+  border-top: 1px dashed $hrc;
+}
+.bor-ra4 {
+  border-radius: 4px;
+}
